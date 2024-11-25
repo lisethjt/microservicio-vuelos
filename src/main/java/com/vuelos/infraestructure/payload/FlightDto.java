@@ -21,5 +21,5 @@ public class FlightDto {
 	private String company;
 	private Instant date;
 	private double price;
-	private String chairs;
+	private int chairs;
 }

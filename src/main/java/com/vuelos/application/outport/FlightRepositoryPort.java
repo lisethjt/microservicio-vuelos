@@ -9,4 +9,6 @@ public interface FlightRepositoryPort {
 	public List<Flight> getFlightList();
 	
 	public Flight getFlight(Long id);
+	
+	public Flight updateFlight(Flight flight);
 }

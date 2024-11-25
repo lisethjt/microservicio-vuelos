@@ -30,4 +30,14 @@ public final class FlightDboMapper {
 		return toFlight(flight.get());
 		
 	}
+	
+	public static FlightEntity toFlightEntity(Flight flight) {		
+		return FlightEntity.builder()		
+				.id(flight.getId())
+				.company(flight.getCompany())
+				.chairs(flight.getChairs())
+				.date(flight.getDate())
+				.price(flight.getPrice())
+				.build();
+	}
 }

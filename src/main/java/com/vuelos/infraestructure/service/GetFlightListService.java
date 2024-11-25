@@ -1,6 +1,7 @@
 package com.vuelos.infraestructure.service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Service;
 
@@ -19,6 +20,7 @@ public class GetFlightListService implements GetFlightList {
 
 	@Override
 	public List<Flight> execute() {
-		return flightRepositoryPort.getFlightList();
+		return flightRepositoryPort.getFlightList()
+				.stream().filter(f -> f.getChairs()>0).collect(Collectors.toList());
 	}
 }

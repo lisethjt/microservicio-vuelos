@@ -29,5 +29,5 @@ public class FlightEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Instant date;
 	private double price;
-	private String chairs;
+	private int chairs;
 }
