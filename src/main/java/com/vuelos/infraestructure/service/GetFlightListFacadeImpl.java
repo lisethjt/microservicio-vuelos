@@ -26,7 +26,9 @@ public class GetFlightListFacadeImpl implements GetFlightListFacade {
 		messageResponse.setCode("10");
 		messageResponse.setMessage("Exito");
 
-		List<FlightDto> flightList = getFlightListService.execute().stream().map(FlightDtoMapper::toFlightDto)
+		List<FlightDto> flightList = getFlightListService.execute()
+				.stream()
+				 .map(FlightDtoMapper::toFlightDto)
 				.collect(Collectors.toList());
 		if (flightList.size() > 0) {
 			flightListResponse.setFlightList(flightList);

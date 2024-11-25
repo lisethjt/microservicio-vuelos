@@ -24,4 +24,9 @@ public class FlightRepositoryPortImpl implements FlightRepositoryPort {
 			.map(FlightDboMapper::toFlight)
 			.collect(Collectors.toList());
 	}
+
+	@Override
+	public Flight getFlight(Long id) {
+		return FlightDboMapper.toFlight(flightRepository.findById(id));
+	}
 }

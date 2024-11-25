@@ -7,4 +7,6 @@ import com.vuelos.domain.model.Flight;
 public interface FlightRepositoryPort {
 
 	public List<Flight> getFlightList();
+	
+	public Flight getFlight(Long id);
 }
